@@ -1,8 +1,6 @@
 package orderedStructures;
 
 import java.security.InvalidParameterException;
-
-import exceptions.IlegalStateException;
 import interfaces.OrderedNumberStructure; 
 
 public abstract class Progression implements OrderedNumberStructure {
@@ -46,5 +44,5 @@ public abstract class Progression implements OrderedNumberStructure {
 		return value; 
 	}
 	
-	public abstract double nextValue() throws IlegalStateException; 
+	public abstract double nextValue(); 
 }

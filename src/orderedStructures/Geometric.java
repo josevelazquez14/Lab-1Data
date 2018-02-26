@@ -10,7 +10,9 @@ public class Geometric extends Progression {
 	}
 	
 	@Override
-	public double nextValue() {
+	public double nextValue() throws IllegalStateException {
+		if(this.didFirstRun)
+			throw new IllegalStateException(); 
 		current = current * commonFactor; 
 		return current;
 	}
