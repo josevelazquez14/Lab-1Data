@@ -24,8 +24,12 @@ public class ProgressionTester2 {
 			Progression p, int n) 
 	{ 
 		// pre: n is valid
-		... add code to compute, and assign to sum, the sum
-		    of the first n terms in p
+		
+		double sum =0;
+		
+		for(int i=1; i<=n; i++){
+			sum += p.getTerm(i);
+		}
 		    
 		System.out.println("Sum of first " + n + " terms in " 
 				+ p + " is: " + sum); 

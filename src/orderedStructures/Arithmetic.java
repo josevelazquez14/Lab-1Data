@@ -14,4 +14,17 @@ public class Arithmetic extends Progression {
 		return current;
 	}
 
+	
+	public String toString(){
+		return "Arith("+(int)this.firstValue()+","+(int)this.commonDifference +")";
+	}
+	
+	public double getTerm(int n) throws IndexOutOfBoundsException { 
+		if (n <= 0) 
+			throw new IndexOutOfBoundsException("printAllTerms: Invalid argument value = " + n); 
+
+		double value = this.firstValue() +(n-1)*this.commonDifference;
+		
+		return value;
+	}
 }
