@@ -1,5 +1,7 @@
 package orderedStructures;
 
+import exceptions.IlegalStateException;
+
 public class Arithmetic extends Progression {
 	private double commonDifference; 
 	
@@ -9,7 +11,11 @@ public class Arithmetic extends Progression {
 	}
 	
 	@Override
-	public double nextValue() {
+	public double nextValue() throws IlegalStateException {
+		if(!didFirstRun){
+			throw new IlegalStateException("can't get nextValue without firstvalue");
+		}
+		
 		current = current + commonDifference; 
 		return current;
 	}
